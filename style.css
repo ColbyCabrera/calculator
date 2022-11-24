@@ -132,16 +132,8 @@ p {
     transition: all 0.1s;
 }
 
-.display {
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-}
-
 .output {
-    width: fit-content;
+    font-size: 8rem;
     text-align: right;
     padding-right: 1rem;
-    font-size: 8rem;
-    height: 100%;
 }
