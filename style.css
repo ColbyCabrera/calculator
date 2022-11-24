@@ -9,10 +9,139 @@ html {
     min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
+    color: #eee;
+    background-color: black;
 }
 
 h1 {
     font-size: 6rem;
     text-align: center;
     margin-top: 2rem;
+}
+
+.calculator__container {
+    background-color: #eee;
+    height: 60rem;
+    width: 40rem;
+    margin: 0 auto;
+    margin-top: 8rem;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.calculator {
+
+}
+
+.display {
+    background-color: black;
+    flex-basis: 10rem;
+}
+
+.input {
+    flex-basis: 50rem;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-and-d {
+    flex-basis: 8rem;
+    background-color: #eee;
+    display: flex;
+    gap: 2px;
+}
+
+.c-and-d p {
+    font-size: 4rem;
+}
+
+.clear {
+
+    flex-basis: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+.delete {
+    flex-basis: 50%;
+    background-color: black;
+    height: 100%;
+}
+
+.clear, .delete {
+    display: flex;
+    align-items: center;
+}
+
+.num-op {
+    flex-basis: 42rem;
+    background-color: black;
+    display: flex;
+}
+
+.numbers {
+    flex-basis: 75%;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.operators {
+    flex-basis: 25%;
+    border-left: 1px solid #eee;
+}
+
+.number {
+    flex-basis: 33.3%;
+    display: flex;
+    align-items: center;
+}
+
+.equal {
+    flex-basis: 66%;
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+}
+
+.operator {
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.number:hover, .operator:hover, .clear p:hover, .delete p:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.number, .operator, .clear p, .delete p {
+    transition: all 0.1s;
+}
+
+.display {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.output {
+    width: fit-content;
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 8rem;
+    height: 100%;
 }
