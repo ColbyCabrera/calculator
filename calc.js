@@ -42,7 +42,7 @@ function deleteLast() {
 function eval() {
     let result;
 
-    if (expression[2] == 0) {
+    if (expression[2] == 0 && expression[1] === "divide") {
         result = "dont do that"
     } else if (expression[2] != null) {
         result = operate(expression[0], expression[1], expression[2]) + "";
