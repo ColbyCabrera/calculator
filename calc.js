@@ -66,7 +66,7 @@ function operate(operand1, operator, operand2) {
 }
 
 function add(op1, op2) {
-    return parseInt(op1) + parseInt(op2);
+    return parseFloat(op1) + parseFloat(op2);
 }
 
 function subtract(op1, op2) {
