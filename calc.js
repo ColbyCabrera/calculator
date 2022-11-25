@@ -76,11 +76,11 @@ function subtract(op1, op2) {
 }
 
 function multiply(op1, op2) {
-    return (op1 * op2).toFixed(5);
+    return Math.round((op1 * op2) * 100000) / 100000;
 }
 
 function divide(op1, op2) {
-    return (op1 / op2).toFixed(5);
+    return Math.round((op1 / op2) * 100000) / 100000;
 }
 
 function createExpression(event) {
