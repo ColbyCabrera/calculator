@@ -1,7 +1,5 @@
 function updateDisplay(data) {
     const display = document.querySelector('.output');
-    console.log(data);
-    console.log(data.search("add"));
 
     if (data.search("add") > 0) {
         data = data.replace("add", "+");
@@ -23,15 +21,32 @@ function clear() {
 }
 
 function deleteLast() {
-    
+    if (expression[2] != null && expression[2] != 0 && expression[2] != "") {
+        expression[2] = expression[2].toString().slice(0, expression[2].length - 1);
+        console.log(expression[2]);
+        updateDisplay(expression[0] + " " + expression[1] + " " + expression[2]);
+    } else if (expression[1] != null) {
+        expression[1] = null;
+        updateDisplay(expression[0] + " ");
+    } else {
+        expression[0] = expression[0].toString().slice(0, expression[0].length - 1);
+        updateDisplay(expression[0]);
+    }
 }
 
 function eval() {
-    console.log(expression);
-    if (expression[2] != null) {
-        updateDisplay(operate(expression[0], expression[1], expression[2]) + "");
+    let result;
+
+    if (expression[2] == 0) {
+        result = "dont do that"
+    } else if (expression[2] != null) {
+        result = operate(expression[0], expression[1], expression[2]) + "";
+        expression[0] = result;
+        expression[1] = null;
+        expression[2] = null;
     }
-    
+
+    updateDisplay(result);
 }
 
 function operate(operand1, operator, operand2) {

@@ -21,7 +21,7 @@ h1 {
 
 .calculator__container {
     background-color: #eee;
-    height: 60rem;
+    min-height: 60rem;
     width: 40rem;
     margin: 0 auto;
     margin-top: 8rem;
@@ -30,9 +30,8 @@ h1 {
     flex-direction: column;
     gap: 2px;
 }
-
 .calculator {
-
+    height: 100rem;
 }
 
 .display {
@@ -123,12 +122,17 @@ p {
     align-items: center;
 }
 
-.number:hover, .operator:hover, .clear p:hover, .delete p:hover {
-    transform: scale(1.1);
+.clear p:hover, .delete p:hover {
+    transform: scale(1.05);
     color: #fff;
 }
 
-.number, .operator, .clear p, .delete p {
+.number:hover, .operator:hover, .equal:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+.number, .operator, .clear p, .delete p, .equal {
     transition: all 0.1s;
 }
 
