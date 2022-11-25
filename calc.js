@@ -21,7 +21,7 @@ function clear() {
 }
 
 function deleteLast() {
-    if (expression[2] != null && expression[2] != 0 && expression[2] != "") {
+    if (expression[2] != null && expression[2] != "") {
         expression[2] = expression[2].toString().slice(0, expression[2].length - 1);
         console.log(expression[2]);
         updateDisplay(expression[0] + " " + expression[1] + " " + expression[2]);
@@ -29,8 +29,13 @@ function deleteLast() {
         expression[1] = null;
         updateDisplay(expression[0] + " ");
     } else {
-        expression[0] = expression[0].toString().slice(0, expression[0].length - 1);
-        updateDisplay(expression[0]);
+        if (expression[0].length > 1) {
+            expression[0] = expression[0].toString().slice(0, expression[0].length - 1);
+        } else {
+            expression[0] = 0;
+        }
+
+        updateDisplay(expression[0] + "");
     }
 }
 
@@ -50,9 +55,6 @@ function eval() {
 }
 
 function operate(operand1, operator, operand2) {
-
-    console.log("here");
-    console.log(operator);
 
     if (operator === "multiply") {
         return multiply(operand1, operand2);
@@ -74,11 +76,11 @@ function subtract(op1, op2) {
 }
 
 function multiply(op1, op2) {
-    return op1 * op2;
+    return (op1 * op2).toFixed(5);
 }
 
 function divide(op1, op2) {
-    return op1 / op2;
+    return (op1 / op2).toFixed(5);
 }
 
 function createExpression(event) {
