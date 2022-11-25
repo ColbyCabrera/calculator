@@ -13,6 +13,12 @@ html {
     background-color: black;
 }
 
+@media only screen and (max-width: 60rem) {
+    html {
+        font-size: 50%;
+    }
+  }
+
 h1 {
     font-size: 6rem;
     text-align: center;
@@ -31,7 +37,7 @@ h1 {
     gap: 2px;
 }
 .calculator {
-    height: 100rem;
+    height: fit-content;
 }
 
 .display {
